@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form 1</title>
+</head>
+
+<body>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgba(0, 0, 0, 0.796);
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        input[type="text"],
+
+
+
+        input[type="email"],
+
+        input[type="number"],
+
+        input[type="Skills"],
+
+        .blogs,
+
+        textarea {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #a8a4a4;
+            border-radius: 5px;
+            border: 2px solid darkblue;
+            margin-bottom: 4vh;
+            opacity: 40%;
+        }
+
+        input[type="submit"] {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: calc(32.5vw);
+
+        }
+
+        .details,
+        .project_details {
+            height: 10vh;
+            border-radius: 28px;
+            margin-bottom: 4vh;
+            opacity: 40%;
+        }
+
+        .details:hover,
+        .project_details:hover,
+        input[type="text"]:hover,
+        input[type="Skills"]:hover,
+        input[type="email"]:hover,
+        input[type="number"]:hover,
+        .blogs:hover {
+
+            opacity: 85%;
+        }
+
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        form {
+            background-image: url('oip (2).jpeg');
+            background-size: cover;
+            opacity: 70%;
+            border: 2px solid blue;
+            padding: 2vw 2vh;
+            box-shadow: -5px -5px green;
+            border-radius: 5% 5% 5% 5%;
+            color: white;
+        }
+
+        label {
+            text-align: center;
+        }
+
+        @media screen and (max-width:400px) {
+
+            body,
+            html {
+                width: 100vw;
+                height: 100vh;
+            }
+        }
+    </style>
+    </head>
+
+    <body>
+        <div class="container">
+
+            <form action="/form1" method="post">
+                <h2>Form 1</h2>
+                <label for="name"> First name:</label>
+                <input type="text" placeholder="Enter your full name" id="name" name="name">
+               
+
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email id" required>
+                <div class="error"></div>
+
+                <label for="phone">Phone no. </label>
+                <input type="number" id="Phone " name="phone" required>
+                <div class="error"></div>
+
+
+                <label for="Skills">Skill 1 </label>
+                <input type="Skills" class="Skills" name="skill1" required>
+
+                <label for="Skills">Skill 2 </label>
+                <input type="Skills" class="Skills" name="skill2" required>
+
+
+                <label for="Skills">Skill 3 </label>
+                <input type="Skills" class="Skills" name="skill3" required>
+
+                <label for="school">School</label>
+                <input type="text" name="school" id="school">
+
+                <label for="college">College</label>
+                <input type="text" name="college" id="college">
+
+                <label for="blog1">Blog 1</label>
+                <input type="text" name="blog1" id="blog1" class="blogs">
+                <input type="text" name="blog1_details" placeholder="Enter blog details" class="details">
+
+                <label for="blog2">Blog 2</label>
+                <input type="text" name="blog2" id="blog2" class="blogs">
+                <input type="text" name="blog2_details" placeholder="Enter blog details" class="details">
+
+                <label for="blog3">Blog 3</label>
+                <input type="text" name="blog3" id="blog3" class="blogs">
+                <input type="text" name="blog3_details" placeholder="Enter blog details" class="details">
+
+              
+                <label for="project1">Project 1</label>
+                <input type="text" name="project1" id="blog1" class="projects">
+                <input type="text" name="project1_details" placeholder="Enter project details" class="project_details">
+
+                <label for="project2">Project 2</label>
+                <input type="text" name="project2" id="blog2" class="projects">
+                <input type="text" name="project2_details" placeholder="Enter project details" class="project_details">
+
+                <label for="project3">Project 3</label>
+                <input type="text" name="project3" id="blog3" class="projects">
+                <input type="text" name="project3_details" placeholder="Enter project details" class="project_details">
+
+                <label for="project4">Project 4</label>
+                <input type="text" name="project4" id="blog4" class="projects">
+                <input type="text" name="project4_details" placeholder="Enter project details" class="project_details">
+
+                <label for="project5">Project 5</label>
+                <input type="text" name="project5" id="blog5" class="projects">
+                <input type="text" name="project5_details" placeholder="Enter project details" class="project_details">
+
+
+                <label for="message">Your Quote</label>
+                <input type="text" id="message" name="message" rows="4" required>
+
+                <input type="submit" value="Submit" id="submitIt">
+
+
+
+            </form>
+
+        </div>
+
+    </body>
+    <script>
+
+        let uname=document.getElementById('name');
+        submitIt.addEventListener('click', () => {
+            alert(uname.value + " your form has been submitted successfully")
+            console.log("Submitted");
+            
+        });
+    </script>
+
+</html>
+</form>
+</main>
+
+</body>
+
+</html>

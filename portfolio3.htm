@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>${name}'s Portolio </title>
+    <style>
+        @media screen and (max-width:600px) {
+
+            html,
+            body {
+                width: 100vw;
+                height: 100vh;
+            }
+
+            #welcome,
+            #skill,
+            #others,
+            #about,
+            #intro,
+            .blogs,
+            .projects,
+            #project,
+            #blog {
+                width: 70vw;
+                height: auto;
+                margin: 1vw;
+                transform: translate(1vw, 0vw);
+            }
+
+            .projects,
+            .blogs {
+                max-width: 74vw;
+                width: 70vw;
+                height: auto;
+            }
+
+            aside {
+                display: none;
+            }
+
+        }
+
+        body {
+            background: linear-gradient(132deg, #F8F4EC 0.00%, #FF9BD2 100.00%);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+            filter: blur(10%);
+        }
+
+        aside {
+            width: 9vw;
+            padding: 8px;
+            height: 100vw;
+            position: fixed;
+            background: linear-gradient(132deg, #D63484 0.00%, #FF9BD2 100.00%);
+            color: white;
+            top: 0%;
+            left: 0%;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        main {
+            margin-left: 12vw;
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #greet {
+            margin-left: 12vw;
+            ;
+            width: 50vw;
+            height: 40vh;
+            border-radius: 27px;
+            padding: 4vw;
+            background-color: #F8F4EC;
+            font-weight: bold;
+            opacity: 90%;
+        }
+
+        #home {
+            margin-left: 12vw;
+            ;
+            width: 60vw;
+            height: 40vh;
+            border-radius: 27px;
+            margin-top: 2%;
+            padding: 3vw;
+            background-color: #F8F4EC;
+            font-weight: bold;
+            opacity: 90%;
+        }
+
+        h1 {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        a:hover {
+            background: #000;
+        }
+
+        h1:hover {
+            font-family: algerian;
+            transform: translate(3vw, 0vw);
+            transition: transform 1s;
+            color: darkred;
+        }
+
+        #project,
+        #blog {
+            margin-top: 2vw;
+            width: 60vw;
+            height: 60vh;
+            border-radius: 27px;
+            margin-left: 12vw;
+            ;
+            overflow-y: scroll;
+            padding: 3vw;
+            background-color: #F8F4EC;
+            font-weight: bold;
+            opacity: 90%;
+        }
+
+        .projects,
+        .blogs {
+            border: 1px solid green;
+            margin: 2vh 2vw;
+            height: 30vh;
+            overflow-y: scroll;
+            overflow-x: scroll;
+            padding: 2vw;
+        }
+
+        a {
+            background-color: white;
+            text-decoration: none;
+            color: darkred;
+            cursor: pointer;
+
+        }
+
+        li {
+            margin-top: 2vw;
+            list-style-type: none;
+
+        }
+
+        .lists {
+            font-weight: bolder;
+            text-decoration: underline;
+        }
+
+        #tabs {
+            list-style-type: none;
+            margin: 3vh 2vw;
+            color: rgb(127, 12, 222);
+            font-size: 3vh;
+
+        }
+
+        li {
+            margin: 2vh -1vw;
+            background: none;
+        }
+
+        #p1 {
+            font-size: 3vh;
+        }
+
+        @media screen and (max-width:850px) {
+
+            body,
+            html {
+                width: 100vw;
+                height: 100vh;
+            }
+
+            #welcome,
+            #skill,
+            #others,
+            #about,
+            #intro,
+            .blogs,
+            .projects,
+            #project,
+            #blog {
+                width: 70vw;
+                height: auto;
+                margin: 1vw;
+                transform: translate(1vw, 0vw);
+            }
+
+            aside {
+                width: 25vw;
+                height: 100vh;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <body>
+        <aside>
+            <h2>This webpage contains</h2>
+            <ul id="tabs">
+                <li><a href="#greet">Home</a></li>
+                <li><a href="#home">About me</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#project">Project</a></li>
+            </ul>
+        </aside>
+        <main>
+            <div id="greet">
+                <p id="p1">Greetings to everyone! I welcome all of you on my portfolio page. Here, you will see about
+                    me, my
+                    qualifications, blogs, projects. You are free to ask your every doubts regarding my details, surely
+                    i will
+                    respond to your all doubts.</p>
+            </div>
+            <div id="home">
+                <p>Hey everyone! I am </p>
+                <h1>${name}</h1>
+                <p>I am </p>
+                <span class="skills">${skill1}</span><br>
+                <span class="skills">${skill2}</span><br>
+                <span class="skills">${skill3}</span><br>
+                <span class="skills">${skill4}</span><br>
+                <span class="skills">${skill5}</span><br>
+            </div>
+            <div id="aboutMe">
+
+            </div>
+            <div id="blog">
+                <h2>See some of my blogs</h2>
+                <div class="blogs">
+                    <h3>${blog1}</h3>
+                    <p>${blog1_details}</p>
+                </div>
+                <div class="blogs">
+                    <h3>${blog2}</h3>
+                    <p>${blog2_details}</p>
+                </div>
+                <div class="blogs">
+                    <h3>${blog3}</h3>
+                    <p>${blog3_details}</p>
+                </div>
+                <div class="blogs">
+                    <h3>${blog4}</h3>
+                    <p>${blog4_details}</p>
+                </div>
+                <div class="blogs">
+                    <h3>${blog5}</h3>
+                    <p>${blog5_details}</p>
+                </div>
+            </div>
+            <div id="project">
+                <h2>Also look on some of my projects</h2>
+                <div class="projects">
+                    <h3>${project1}</h3>
+                    <p>${project1_details}</p>
+                </div>
+                <div class="projects">
+                    <h3>${project2}</h3>
+                    <p>${project2_details}</p>
+                </div>
+                <div class="projects">
+                    <h3>${project3}</h3>
+                    <p>${project3_details}</p>
+                </div>
+                <div class="projects">
+                    <h3>${project4}</h3>
+                    <p>${project4_details}</p>
+                </div>
+                <div class="projects">
+                    <h3>${project5}</h3>
+                    <p>${project5_details}</p>
+                </div>
+                <div class="projects">
+                    <h3>${project6}</h3>
+                    <p>${project6_details}</p>
+                </div>
+                <div class="projects">
+                    <h3>${project7}</h3>
+                    <p>${project7_details}</p>
+                </div>
+                <div class="projects">
+                    <h3>${project8}</h3>
+                    <p>${project8_details}</p>
+                </div>
+            </div>
+        </main>
+    </body>
+</body>
+
+</html>

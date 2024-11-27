@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>${name}'s Portfolio</title>
+    <style>
+        body {
+            width: 100vw;
+            display: flex;
+            flex-direction: row;
+            background: linear-gradient(45deg, #B6FFFA, #98E4FF 100.00%);
+
+        }
+
+        aside {
+            width: 9vw;
+            height: 100vh;
+            border: 1px solid rgba(98, 0, 255, 0.708);
+            margin-right: 2vw;
+            padding: 2vh;
+            top: 0%;
+            left: 0%;
+            position: fixed;
+            background: linear-gradient(45deg, #7febe3, #066486 100.00%);
+        }
+
+        main {
+            width: 80vw;
+            position: absolute;
+            transform: translate(18vw, 0vw);
+        }
+
+        li {
+            list-style-type: none;
+            padding: 2vh 2vw;
+            color: rgb(127, 12, 222);
+            font-size: 3vh;
+        }
+
+        span {
+            font-size: larger;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        p {
+            font-size: 3vh;
+        }
+
+        #greet,
+        #about {
+            margin: auto;
+            font-size: medium;
+            padding: 3vw;
+            border-radius: 28px;
+            text-align: center;
+            width: 50vw;
+            height: 18vh;
+            background-color: rgba(5, 37, 93, 0.533);
+            opacity: 90%;
+        }
+
+        #projects {
+            margin: auto;
+            width: 70vw;
+            height: auto;
+            border: 2px solid rgb(0, 17, 128);
+            padding: 3vw;
+            border-radius: 28px;
+            margin-top: 3vh;
+            box-shadow: 3px -3px 3px rgb(3, 47, 134);
+            background-color: rgba(5, 37, 93, 0.533);
+            opacity: 80%;
+            color: black;
+        }
+
+        #intro {
+            width: 50vw;
+            height: auto;
+            box-shadow: 3px -3px 3px green;
+            padding: 3vw;
+            border: 2px solid rgb(5, 62, 128);
+            border-radius: 28px;
+            margin-top: 3vh;
+            margin-bottom: 3vh;
+            background-color: rgba(5, 37, 93, 0.533);
+            opacity: 80%;
+        }
+
+        * {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: black;
+        }
+
+        #blogs {
+            margin-top: 3vh;
+            width: 70vw;
+            height: 80vh;
+            background-color: rgba(5, 37, 93, 0.533);
+            border-radius: 28px;
+            box-shadow: 3px -3px 3px #03098b;
+            padding: 3vw;
+            margin-bottom: 2vh;
+            border: 2px solid rgb(0, 21, 128);
+            opacity: 70%;
+
+        }
+
+        h2 {
+            font-size: 4vh;
+        }
+        #name{
+            text-transform: capitalize;
+        }
+        #name:hover{
+            transform: rotate(360deg);
+            transition: transform 2s;
+        }
+        @media screen and (max-width:600px) {
+            html,body{
+                width: 100vw;
+                height: 100vh;
+            }
+            
+            #greet,#aboutMe,#home,.blogs,.projects,#project,#blog{
+                width: 70vw;
+                height: auto;
+                
+                transform: translate(1vw,0vw);
+            }
+            aside{
+                display: none;
+            }
+           
+        }
+        @media screen and (max-width:850px) {
+            
+            body,html{
+                width: 100vw;
+                height: 100vh;
+            }
+            #greet,#aboutMe,#home,.blogs,.projects{
+                width: 70vw;
+                height: auto;
+                margin: 1vw;
+            }
+            aside{
+                width: 25vw;
+                height: 100vh;
+            }
+            main{
+                transform: translate(15vw,0vw);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <aside>
+        <ul>
+            <li><a href="#greet">Home</a></li>
+            <li><a href="#intro">Help me</a></li>
+            <li><a href="#blogs">blogs</a></li>
+            <li><a href="#projects">Project</a></li>
+        </ul>
+    </aside>
+    <main>
+        <div id="greet">
+            <p> Welcome to my website! I’m so glad you’re here. I hope you enjoy exploring my content and learning more
+                about me. Feel free to contact me if you have any questions or feedback.</p>
+        </div>
+        <div id="intro">
+            <h3>Hello everyone! It is </h3>
+            <h1 id="name">${name}</h1>
+            <p>I am a</p>
+            <div> <span>${skill1}</span></div>
+            <div> <span>${skill2}</span></div>
+            <div> <span>${skill3}</span></div>
+        </div>
+        <div id="about">
+            <p>As you seen above about my introduction now i will give you my complete introduction. You know my name, i
+                am from ${address}. I have completed my schooling from ${school} and completed my further studies at
+                ${}. </p>
+        </div>
+        <div id="blogs">
+            <h2>See some of my Blogs</h2>
+            <div class="blog">
+                <h3>${blog1}</h3>
+                <p>${blog1_details}</p>
+            </div>
+            <div class="blog">
+                <h3>${blog2}</h3>
+                <p>${blog2_details}</p>
+            </div>
+            <div class="blog">
+                <h3>${blog3}</h3>
+                <p>${blog3_details}</p>
+            </div>
+            for more blogs see my blog page ${blogPageLink}
+        </div>
+        <div id="projects">
+            <h2>Also see some of my projects</h2>
+            <div class="project">
+                <h3>${project1}</h3>
+                <p>${project1_details}</p>
+            </div>
+            <div class="project">
+                <h3>${project2}</h3>
+                <p>${project2_details}</p>
+            </div>
+            <div class="project">
+                <h3>${project3}</h3>
+                <p>${project3_details}</p>
+            </div>
+            <div class="project">
+                <h3>${project4}</h3>
+                <p>${project4_details}</p>
+            </div>
+            <div class="project">
+                <h3>${project5}</h3>
+                <p>${project5_details}</p>
+            </div>
+        </div>
+
+    </main>
+</body>
+</body>
+<script>
+    function scroll1() {
+        window.scrollTo(0, 0);
+    }
+    function scroll2() {
+        window.scrollTo(0, 600);
+    }
+</script>
+
+</html>

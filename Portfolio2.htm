@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>${name's portfolio}</title>
+    <style>
+        body {
+            background: linear-gradient(132deg, rgb(3, 148, 108) 0.00%, rgb(33, 35, 34) 100.00%);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+            filter: blur(10%);
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        main {
+
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #greet {
+            width: 50vw;
+            height: 40vh;
+            border-radius: 27px;
+            transform: translate(25vw, 0vw);
+            padding: 4vw;
+            background-color: skyblue;
+            font-weight: bold;
+            opacity: 70%;
+        }
+
+        #home,#aboutMe {
+            width: 60vw;
+            height: 40vh;
+            border-radius: 27px;
+            margin-top: 2%;
+            transform: translate(25vw, 0vw);
+            padding: 3vw;
+            background-color: skyblue;
+            font-weight: bold;
+            opacity: 70%;
+        }
+
+        aside {
+            width: 9vw;
+            padding: 8px;
+            height: 100vw;
+            position: fixed;
+            background-color: red;
+            color: white;
+        }
+
+        h1 {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        h1:hover {
+            font-family: algerian;
+            transform: translate(3vw, 0vw);
+            transition: transform 1s;
+            color: darkred;
+        }
+
+        #project,
+        #blog {
+            margin-top: 2vw;
+            width: 60vw;
+            height: 60vh;
+            border-radius: 27px;
+            transform: translate(25vw, 0vw);
+            overflow-y: scroll;
+            padding: 3vw;
+            background-color: skyblue;
+            font-weight: bold;
+            opacity: 70%;
+        }
+
+        .projects,
+        .blogs {
+            border: 1px solid green;
+            margin: 2vh 2vw;
+            height: 30vh;
+            overflow-y: scroll;
+            overflow-x: scroll;
+            padding: 2vw;
+        }
+
+        a {
+            background-color: white;
+            text-decoration: none;
+            color: darkred;
+            cursor: pointer;
+
+        }
+
+        li {
+            margin-top: 2vw;
+            list-style-type: none;
+
+        }
+        .lists{
+            font-weight: bolder;
+            text-decoration: underline;
+        }
+        @media screen and (max-width:600px) {
+            html,body{
+                width: 100vw;
+                height: 100vh;
+            }
+            
+            #greet,#aboutMe,#home,.blogs,.projects,#project,#blog{
+                width: 70vw;
+                height: auto;
+                
+                transform: translate(1vw,0vw);
+            }
+            aside{
+                display: none;
+            }
+           
+        }
+        @media screen and (max-width:850px) {
+            
+            body,html{
+                width: 100vw;
+                height: 100vh;
+            }
+            #greet,#aboutMe,#home,.blogs,.projects{
+                width: 70vw;
+                height: auto;
+                margin: 1vw;
+            }
+            aside{
+                width: 25vw;
+                height: 100vh;
+            }
+            main{
+                transform: translate(15vw,0vw);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <aside>
+        This webpage contains
+        <ul>
+            <li class="lists">Home</li>
+            <li class="lists">About</li>
+            <li class="lists">Blogs</li>
+            <li class="lists">Projects</li>
+           
+        </ul>
+
+        
+        
+        
+        
+    </aside>
+    <main>
+        <div id="greet">
+            Greetings to everyone! I welcome all of you on my portfolio page. Here, you will see about me, my
+            qualifications, blogs, projects. You are free to ask your every doubts regarding my details, surely i will
+            respond to your all doubts.
+        </div>
+        <div id="home">
+            <p>Hey everyone! I am </p>
+            <h1>${name}</h1>
+            <p>I am </p>
+            <span class="skills">${skill1}</span><br>
+            <span class="skills">${skill2}</span><br>
+            <span class="skills">${skill3}</span><br>
+            <span class="skills">${skill4}</span><br>
+            <span class="skills">${skill5}</span><br>
+        </div>
+        <div id="aboutMe">
+            <p>I have completed my 10th from ${school}, and completed next high education degree in ${college}. And
+                living at ${address}</p>
+        </div>
+        <div id="blog">
+            <h2>See some of my blogs</h2>
+            <div class="blogs">
+                <h3>${blog1}</h3>
+                <p>${blog1_details}</p>
+            </div>
+            <div class="blogs">
+                <h3>${blog2}</h3>
+                <p>${blog2_details}</p>
+            </div>
+            <div class="blogs">
+                <h3>${blog3}</h3>
+                <p>${blog3_details}</p>
+            </div>
+            <div class="blogs">
+                <h3>${blog4}</h3>
+                <p>${blog4_details}</p>
+            </div>
+            <div class="blogs">
+                <h3>${blog5}</h3>
+                <p>${blog5_details}</p>
+            </div>
+        </div>
+        <div id="project">
+            <h2>Also look on some of my projects</h2>
+            <div class="projects">
+                <h3>${project1}</h3>
+                <p>${project1_details}</p>
+            </div>
+            <div class="projects">
+                <h3>${project2}</h3>
+                <p>${project2_details}</p>
+            </div>
+            <div class="projects">
+                <h3>${project3}</h3>
+                <p>${project3_details}</p>
+            </div>
+            <div class="projects">
+                <h3>${project4}</h3>
+                <p>${project4_details}</p>
+            </div>
+            <div class="projects">
+                <h3>${project5}</h3>
+                <p>${project5_details}</p>
+            </div>
+            <div class="projects">
+                <h3>${project6}</h3>
+                <p>${project6_details}</p>
+            </div>
+            <div class="projects">
+                <h3>${project7}</h3>
+                <p>${project7_details}</p>
+            </div>
+            <div class="projects">
+                <h3>${project8}</h3>
+                <p>${project8_details}</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>${name}'s Portfolio</title>
+    <style>
+        body {
+            width: 100vw;
+            display: flex;
+            flex-direction: row;
+            /*background: linear-gradient(45deg, #B6FFFA, #98E4FF 100.00%);*/
+            background: linear-gradient(45deg, #B6FFFA, #98E4FF 100.00%);
+        }
+
+        aside {
+            width: 9vw;
+            height: 100vh;
+            padding: 2vw;
+            border: 1px solid red;
+            margin-right: 2vw;
+            position: fixed;
+          
+          
+        }
+
+        li {
+            list-style-type: none;
+            padding: 2vh 2vw;
+            color: darkblue;
+        }
+
+        main {
+            width: 80vw;
+            margin-left: 2vw;
+            position: absolute;
+            transform: translate(18vw, 0vw);
+        }
+
+        #blogs {
+            width: 70vw;
+            height: 80vh;
+            background-color: white;
+            border-radius: 28px;
+            box-shadow: 3px -3px 3px green;
+            padding: 3vw;
+            margin-bottom: 2vh;
+            border: 2px solid green;
+            opacity: 70%;
+            overflow-y: scroll;
+            margin-top: 3vh;
+        }
+
+        #greet,
+        #about {
+            padding: 3vw;
+            border-radius: 28px;
+            text-align: center;
+            width: 50vw;
+            height: 18vh;
+            background-color: white;
+            opacity: 80%;
+        }
+
+        #projects {
+            width: 70vw;
+            height: auto;
+            border: 2px solid green;
+            padding: 3vw;
+            border-radius: 28px;
+            margin-top: 3vh;
+            box-shadow: 3px -3px 3px green;
+            background-color: white;
+            opacity: 80%;
+            color: black;
+        }
+
+        span {
+            font-size: larger;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        * {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: black;
+        }
+
+        #intro {
+            width: 50vw;
+            height: auto;
+            box-shadow: 3px -3px 3px green;
+            padding: 3vw;
+            border: 2px solid green;
+            border-radius: 28px;
+            margin-top: 3vh;
+            margin-bottom: 3vh;
+            background-color: white;
+            opacity: 80%;
+        }
+        @media screen and (max-width:600px) {
+            
+            body,html{
+                width: 100vw;
+                height: 100vh;
+            }
+            #greet,#about,#intro,.project,.blog,#blogs,#projects{
+                width: 80vw;
+                height: auto;
+                
+                transform: translate(1vw,0vw);
+            }
+            aside{
+                display: none;
+            }
+            
+        }
+        @media screen and (max-width:850px) {
+            
+            body,html{
+                width: 100vw;
+                height: 100vh;
+            }
+            #greet,#about,#intro,#blogs,#projects{
+                width: 60vw;
+                height: auto;
+                transform: translate(15vw,0vw);
+            }
+            aside{
+                width: 26vw;
+                height: 100vh;
+            }
+            
+        }
+    </style>
+</head>
+
+<body>
+    <aside>
+       This webpage contains the following information: 
+       <ul>
+        <li>About me</li>
+        <li>My Skills</li>
+        <li>Blogs</li>
+        <li>Projects</li>
+       </ul>
+    </aside>
+    <main>
+        <div id="greet">
+            Welcome to my website! I’m so glad you’re here. I hope you enjoy exploring my content and learning more
+            about me. Feel free to contact me if you have any questions or feedback.
+        </div>
+        <div id="intro">
+            <h3>Hello everyone! It is </h3>
+            <h1>${name}</h1>
+            <p>I am a</p>
+            <div> <span>${skill1}</span></div>
+            <div> <span>${skill2}</span></div>
+            <div> <span>${skill3}</span></div>
+        </div>
+        <div id="about">
+            <p>As you seen above about my introduction now i will give you my complete introduction. You know my name, i
+                am from ${address}. I have completed my schooling from ${school} and completed my further studies at
+                ${}. </p>
+        </div>
+        <div id="blogs">
+            <h2>See some of my Blogs</h2>
+            <div class="blog">
+                <h3>${blog1}</h3>
+                <p>${blog1_details}</p>
+            </div>
+            <div class="blog">
+                <h3>${blog2}</h3>
+                <p>${blog2_details}</p>
+            </div>
+            <div class="blog">
+                <h3>${blog3}</h3>
+                <p>${blog3_details}</p>
+            </div>
+            for more blogs see my blog page ${blogPageLink}
+        </div>
+        <div id="projects">
+            <h2>Also see some of my projects</h2>
+            <div class="project">
+                <h3>${project1}</h3>
+                <p>${project1_details}</p>
+            </div>
+            <div class="project">
+                <h3>${project2}</h3>
+                <p>${project2_details}</p>
+            </div>
+            <div class="project">
+                <h3>${project3}</h3>
+                <p>${project3_details}</p>
+            </div>
+            <div class="project">
+                <h3>${project4}</h3>
+                <p>${project4_details}</p>
+            </div>
+            <div class="project">
+                <h3>${project5}</h3>
+                <p>${project5_details}</p>
+            </div>
+        </div>
+
+    </main>
+</body>
+<script>
+    function scroll1() {
+        window.scrollTo(0,0);
+    }
+    function scroll2(){
+        window.scrollTo(0,600);
+    }
+</script>
+
+</html>
